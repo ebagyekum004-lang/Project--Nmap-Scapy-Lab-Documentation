@@ -3,7 +3,7 @@
 This repository contains documentation and findings from a controlled network reconnaissance exercise performed on an internal network using Nmap and Scapy tools. The lab focuses on practicing network scanning, service enumeration, and packet analysis using industry-standard tools. 
 The documentation also contains screenshots from the lab environment.
 
-**Objectives**
+**Objectives:**
 The purpose of this lab is to demonstrate and practice fundamental network reconnaissance techniques including:
 - Network scanning and host discovery
 - Operating system fingerprinting
@@ -12,16 +12,17 @@ The purpose of this lab is to demonstrate and practice fundamental network recon
 - Packet sniffing and analysis
 These skills are foundational in ethical hacking and penetration testing engagements.
 
-**Lab Environment**
+**Lab Environment:**
 Machine: Kali Linux
 Network: 10.6.6.0/24
 Target System: 10.6.6.23
 
-**Tools Used**
+**Tools Used:**
 Nmap:  Network discovery and security auditing
 Scapy: Packet crafting and manipulation
 
 **NMAP LAB**
+
 **Methodology & Results**
 1. Host Discovery (Ping Sweep)
 Command: nmap -sn 10.6.6.0/24
@@ -48,7 +49,7 @@ Command: smbclient //10.6.6.23/print$ -N
 Purpose: Test anonymous SMB login to identify misconfigurations.
 Result: Anonymous login was successful, indicating a potential security misconfiguration that could allow unauthorized access to network resources.
 
-**Conclusion**
+**Conclusion:**
 The lab exercises successfully demonstrated core network reconnaissance techniques. Key findings include:
 1. Successful identification of a live host (`10.6.6.23`) on the network
 2. OS fingerprinting capabilities using Nmap
