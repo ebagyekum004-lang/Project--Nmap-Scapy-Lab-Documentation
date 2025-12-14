@@ -19,6 +19,7 @@ Target System: 10.6.6.23
 
 **Tools Used:**
 Nmap:  Network discovery and security auditing
+
 Scapy: Packet crafting and manipulation
 
 **NMAP LAB**
@@ -26,27 +27,37 @@ Scapy: Packet crafting and manipulation
 **Methodology & Results**
 1. Host Discovery (Ping Sweep)
 Command: nmap -sn 10.6.6.0/24
+
 Purpose: Identify live hosts on the network.
+
 Result: Target system `10.6.6.23` was detected as UP.
 
 2. OS Detection
 Command: sudo nmap -O 10.6.6.23
+
 Purpose: Attempt to determine the operating system of the target.
+
 Result: Nmap returned an OS guess based on TCP/IP fingerprinting techniques.
 
 3. Service & Version Detection (FTP)
 Command: nmap -p21 -sV -A -T4 10.6.6.23
+
 Purpose: Identify services and versions running on port 21 (FTP).
+
 Result: FTP service and specific version details were discovered, which can be used for vulnerability assessment.
 
 4. SMB Enumeration (Port 445)
 Command: nmap --script smb-enum-shares.nse -p445 10.6.6.23
+
 Purpose: List SMB shares and check access permissions.
+
 Result: SMB shares were listed along with their permission levels, identifying potential access points.
 
 5. Manual SMB Access Test
 Command: smbclient //10.6.6.23/print$ -N
+
 Purpose: Test anonymous SMB login to identify misconfigurations.
+
 Result: Anonymous login was successful, indicating a potential security misconfiguration that could allow unauthorized access to network resources.
 
 **Conclusion:**
