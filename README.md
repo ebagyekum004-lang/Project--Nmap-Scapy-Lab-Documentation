@@ -1,6 +1,7 @@
 # Project--Nmap-Scapy-Lab-Documentation
 
-This repository contains documentation and findings from a controlled network reconnaissance exercise performed on an internal network using Nmap and Scapy tools. The lab focuses on practicing network scanning, service enumeration, and packet analysis using industry-standard tools. 
+This repository contains documentation and findings from a controlled network reconnaissance exercise performed on an internal network using Nmap and Scapy tools. The lab focuses on practicing network scanning, service enumeration, and packet analysis using industry-standard tools (Nmap and Scapy). 
+
 The documentation also contains screenshots from the lab environment.
 It also contains a reflection of what I learnt.
 
