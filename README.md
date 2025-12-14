@@ -2,6 +2,7 @@
 
 This repository contains documentation and findings from a controlled network reconnaissance exercise performed on an internal network using Nmap and Scapy tools. The lab focuses on practicing network scanning, service enumeration, and packet analysis using industry-standard tools. 
 The documentation also contains screenshots from the lab environment.
+It also contains a reflection of what I learnt.
 
 
 **Objectives:**
@@ -18,6 +19,7 @@ These skills are foundational in ethical hacking and penetration testing engagem
 
 
 **Lab Environment:**
+
 Machine: Kali Linux
 
 Network: 10.6.6.0/24
@@ -26,57 +28,60 @@ Target System: 10.6.6.23
 
 
 **Tools Used:**
+
 Nmap:Network discovery and security auditing
 
 Scapy: Packet crafting and manipulation
 
 
-**NMAP LAB**
+
+**1. NMAP LAB**
 
 **Methodology & Results**
-1. Host Discovery (Ping Sweep)
 
-Command: nmap -sn 10.6.6.0/24
+1.1 Host Discovery (Ping Sweep)
 
-Purpose: Identify live hosts on the network.
+- Command: nmap -sn 10.6.6.0/24
 
-Result: Target system `10.6.6.23` was detected as UP.
+- Purpose: Identify live hosts on the network.
 
-
-2. OS Detection
-
-Command: sudo nmap -O 10.6.6.23
-
-Purpose: Attempt to determine the operating system of the target.
-
-Result: Nmap returned an OS guess based on TCP/IP fingerprinting techniques.
+- Result: Target system `10.6.6.23` was detected as UP.
 
 
-3. Service & Version Detection (FTP)
+1.2 OS Detection
 
-Command: nmap -p21 -sV -A -T4 10.6.6.23
+- Command: sudo nmap -O 10.6.6.23
 
-Purpose: Identify services and versions running on port 21 (FTP).
+- Purpose: Attempt to determine the operating system of the target.
 
-Result: FTP service and specific version details were discovered, which can be used for vulnerability assessment.
-
-
-4. SMB Enumeration (Port 445)
-
-Command: nmap --script smb-enum-shares.nse -p445 10.6.6.23
-
-Purpose: List SMB shares and check access permissions.
-
-Result: SMB shares were listed along with their permission levels, identifying potential access points.
+- Result: Nmap returned an OS guess based on TCP/IP fingerprinting techniques.
 
 
-5. Manual SMB Access Test
+1.3 Service & Version Detection (FTP)
 
-Command: smbclient //10.6.6.23/print$ -N
+- Command: nmap -p21 -sV -A -T4 10.6.6.23
 
-Purpose: Test anonymous SMB login to identify misconfigurations.
+- Purpose: Identify services and versions running on port 21 (FTP).
 
-Result: Anonymous login was successful, indicating a potential security misconfiguration that could allow unauthorized access to network resources.
+- Result: FTP service and specific version details were discovered, which can be used for vulnerability assessment.
+
+
+1.4 SMB Enumeration (Port 445)
+
+- Command: nmap --script smb-enum-shares.nse -p445 10.6.6.23
+
+- Purpose: List SMB shares and check access permissions.
+
+- Result: SMB shares were listed along with their permission levels, identifying potential access points.
+
+
+1.5 Manual SMB Access Test
+
+- Command: smbclient //10.6.6.23/print$ -N
+
+- Purpose: Test anonymous SMB login to identify misconfigurations.
+
+- Result: Anonymous login was successful, indicating a potential security misconfiguration that could allow unauthorized access to network resources.
 
 
 **Conclusion:**
