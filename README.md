@@ -5,20 +5,24 @@ The documentation also contains screenshots from the lab environment.
 
 **Objectives:**
 The purpose of this lab is to demonstrate and practice fundamental network reconnaissance techniques including:
-- Network scanning and host discovery
-- Operating system fingerprinting
-- Service and version identification
-- SMB enumeration and access testing
-- Packet sniffing and analysis
+- Network scanning and host discovery.
+- Operating system fingerprinting.
+- Service and version identification.
+- SMB enumeration and access testing.
+- Packet sniffing and analysis.
+
 These skills are foundational in ethical hacking and penetration testing engagements.
 
 **Lab Environment:**
 Machine: Kali Linux
+
 Network: 10.6.6.0/24
+
 Target System: 10.6.6.23
 
+
 **Tools Used:**
-Nmap:  Network discovery and security auditing
+Nmap:Network discovery and security auditing
 
 Scapy: Packet crafting and manipulation
 
@@ -26,6 +30,7 @@ Scapy: Packet crafting and manipulation
 
 **Methodology & Results**
 1. Host Discovery (Ping Sweep)
+  
 Command: nmap -sn 10.6.6.0/24
 
 Purpose: Identify live hosts on the network.
