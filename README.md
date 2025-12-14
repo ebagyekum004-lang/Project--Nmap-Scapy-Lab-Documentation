@@ -85,7 +85,7 @@ Scapy: Packet crafting and manipulation
 - Result: Anonymous login was successful, indicating a potential security misconfiguration that could allow unauthorized access to network resources.
 
 
-**What I learnt:**
+**What I learnt from the Nmap lab:**
 
 The lab exercises successfully demonstrated core network reconnaissance techniques. Key findings include:
 1. Successful identification of a live host (`10.6.6.23`) on the network
